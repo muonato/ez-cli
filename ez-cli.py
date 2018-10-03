@@ -8,7 +8,7 @@ class CLIMate():
 	def __init__(self):
 		self.run = None
 		self.arg = ""
-		self.fnc = [("HELP", self.help), ("QUIT", self.quit)]
+		self.fnc = [("help", self.help), ("quit", self.quit)]
 
 		readline.parse_and_bind('set editing-mode vi')
 		readline.parse_and_bind('tab: complete')
@@ -28,7 +28,7 @@ class CLIMate():
 			self.get_help("nothing")
 		else:
 			for f in self.fnc:
-				if (self.arg.startswith(f[0])):
+				if (self.arg.lower().startswith(f[0])):
 					self.run = f[1]
 		self.run(self.arg)
 
