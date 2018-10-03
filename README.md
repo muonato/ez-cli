@@ -1,4 +1,4 @@
-# ez-cli
+# EZ-CLI
 
 Simple commandline interpreter Python study project
 
