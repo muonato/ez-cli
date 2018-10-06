@@ -2,13 +2,13 @@
 
 import subprocess, readline
 
-CLI_CMD = ["HELP", "QUIT"]
+CLI_CMD = []
 
 class CLIMate():
 	def __init__(self):
 		self.run = None
 		self.arg = ""
-		self.fnc = [("help", self.help), ("quit", self.quit)]
+		self.fnc = []
 
 		readline.parse_and_bind('set editing-mode vi')
 		readline.parse_and_bind('tab: complete')
@@ -29,13 +29,13 @@ class CLIMate():
 		else:
 			for f in self.fnc:
 				if (self.arg.lower().startswith(f[0])):
-					self.run = f[1]
+					self.run = eval(f[1])
 		self.run(self.arg)
 
-	def quit(self, parm):
+	def cmd_quit(self, parm):
 		print("Goodbye.", "")
 
-	def help(self, parm):
+	def cmd_help(self, parm):
 		print("EZ-CLI COMMANDS\n\tHELP - this\n\tQUIT - exit")
 
 	def sub_call(self, parm):
@@ -46,7 +46,13 @@ class CLIMate():
 
 def main():
 	cli = CLIMate()
-	while not (cli.run == cli.quit):
+
+	for cmd in dir(CLIMate):
+		if cmd.startswith("cmd_"): 
+			cli.fnc.append((cmd[4:], 'self.' + cmd))
+			CLI_CMD.append(cmd[4:].upper())
+
+	while not (cli.run == cli.cmd_quit):
 		try:
 			cli.get_args()
 		except KeyboardInterrupt:
