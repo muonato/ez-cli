@@ -39,11 +39,7 @@ class CLIMate():
 		print("EZ-CLI COMMANDS\n\tHELP - this\n\tQUIT - exit")
 
 	def sub_call(self, parm):
-		try:
-			subprocess.call(parm, shell=True)
-		except KeyboardInterrupt:
-			print("Terminated by keystroke")
-
+		subprocess.run(['/bin/bash', '-i', '-c', parm + "&& exit"])
 def main():
 	cli = CLIMate()
 	while not (cli.run == cli.quit):
