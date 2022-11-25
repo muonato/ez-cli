@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-import subprocess, readline
+import subprocess
+import readline
 
 CLI_CMD = ["HELP", "QUIT"]
 
