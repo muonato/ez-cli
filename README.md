@@ -1,5 +1,5 @@
 # EZ-CLI
-CODE REVIEW & PROOF-OF-CONCEPT
+A CODE REVIEW & PROOF-OF-CONCEPT
 
 Simple commandline interpreter ( Testing an idea, learning Python )
 
