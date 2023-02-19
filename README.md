@@ -1,7 +1,7 @@
 # EZ-CLI
-CODE EXCERCISE
+CODE EXERCISE
 
-Python excercise for an easy commandline interpreter
+Python exercise for an easy commandline interpreter
 
 Define a set of CLI commands with function call associations. Input not recognized as CLI command is treated as system shell subprocess. Utilizing readline module to facilitate CLI history browsing with arrow keys and keyword TAB completion.
 
