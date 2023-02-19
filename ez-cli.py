@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# muonato/ptag @ GitHub (10-AUG-2018)
 
 import subprocess
 import readline
