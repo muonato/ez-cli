@@ -7,4 +7,4 @@ Python exercise for an easy commandline interpreter
 * Input not recognized as CLI command is treated as system shell subprocess
 * Utilizing readline module to facilitate CLI history browsing with arrow keys and keyword TAB completion.
 
-Watch 'Awesome Command Line Tools' by Amjith Ramanujam at PyCon 2017, see https://www.youtube.com/watch?v=hJhZhLg3obk
+Watch 'Awesome Command Line Tools' by Amjith Ramanujam at PyCon 2017, YouTube https://www.youtube.com/watch?v=hJhZhLg3obk
